@@ -1,0 +1,40 @@
+0.   安装git（安装包直接安装即可）,注册gitee账号
+
+1.   在gitee上新建仓库
+
+2.   进入本地你想要上传的文件目录下，右键单击空白处，点击Git Bash Here
+
+3.   配置你的用户名和邮箱
+	git config --global user.name "xxx"
+	git config --global user.email "xxx"
+
+		以下命令可以检查自己的用户名和邮箱
+			git config user.name
+			git config user.email
+
+4.  输入  git init  初始化本地仓库
+
+5.   添加项目目录下所有文件至本地仓库
+	git add .   （注意这里有个点，点前面有一个空格）
+
+6.   加入注释提交（此步骤必不可少！）
+	git commit -m '本次提交的说明'
+
+7.   将本地仓库与远程仓库相连接
+	   首先在远程仓库复制http链接
+      然后输入下列命令（xxx为刚才复制的链接）
+	   git remote add origin xxx
+
+8.   将远程仓库文件更新至指定仓库中
+	   git pull --rebase origin master
+
+9.   将本地仓库中的文件推送至指定的远程仓库中
+	   git push -u origin master
+
+10.  最后回到Gitee网页，刷新一下即可！
+
+11.   CSDN教程，和以上步骤一样
+	https://blog.csdn.net/qq_51618777/article/details/124420589
+
+
+					---------2022/3/4      by 韩逸燊

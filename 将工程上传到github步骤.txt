@@ -1,0 +1,31 @@
+0.   安装git（安装包直接安装即可），注册github账号，以下步骤需在VPN加速下进行
+
+1..   在github上新建仓库
+
+2.   进入本地你想要上传的文件目录下，右键单击空白处，点击Git Bash Here
+
+3.   输入  git init  初始化本地仓库
+
+4.   关联远程仓库   git remote add origin https://github.com/HY-SL/Electrical-Training.git        可以输入  git remote -v  检查关联成功
+
+5.   输入  git add .  添加所有文件到Git （添加指定文件为git add +文件名）
+
+6.   提交代码说明  git commit -m "初次提交代码"
+
+7.  将远程仓库文件更新至指定仓库中
+	   git pull --rebase origin master
+
+8.   将本地仓库中的文件推送至指定的远程仓库中
+	   git push -u origin master
+
+9.   最后回到Github网页，刷新一下即可！
+
+10.   CSDN教程，可用
+	https://blog.csdn.net/Natsuago/article/details/145646982
+
+11. 使用（git push -u origin master）命令推送代码时，
+	可能会有这样报错（fatal: unable to access 'https://github.com/HY-SL/test4.git/': OpenSSL SSL_read: SSL_ERROR_SYSCALL, errno 0）
+	
+	解决办法：切换到 SSH 协议-->  git remote set-url origin +你的github仓库中ssh网址，如   git@github.com:HY-SL/test4.git
+
+				---------2022/3/9      by 韩逸燊
